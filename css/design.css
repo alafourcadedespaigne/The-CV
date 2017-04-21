@@ -17,8 +17,57 @@ header h1{
   display: none;
 }
 
-header nav{
-  display: none;
+header nav .ioMenuMovil{
+  height: 25px;
+  width: 120px;
+  cursor: pointer;
+  line-height: 40px;
+  margin: 0px 0px 0px 10px;
+  padding-top: 5px;
+}
+
+header nav .ioMenuMovil img{
+  height:  100%;
+}
+
+header nav #card_menu{
+  position: relative;
+  width: 230px;
+  background: white;
+  top: -30px;
+  left: 0px;
+  border-right: 3px solid #AFAEAE;
+  z-index: 999;
+  padding-bottom: 50px;
+
+}
+
+header nav #card_menu #logo_menu{
+    height: 200px;
+    width: 80%;
+    margin: 30px; 0px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+header nav #card_menu #logo_menu img{
+  width: 100%;
+
+}
+
+header nav #card_menu ul{
+  margin-top: -20px;
+}
+
+header nav #card_menu ul li{
+  list-style: none; /*Quitarle los puntos a los li*/
+  font-size: 1.5em;
+  line-height: 37px;
+}
+
+header nav #card_menu ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 header #prev_section,
@@ -29,6 +78,7 @@ header #next_section{
   margin: 5px;
   position: absolute;
   top: 0px;
+  overflow: hidden;
 }
 
 header #prev_section{
@@ -52,6 +102,8 @@ header #next_section img{
   transform: rotate(180deg);
 }
 
+/***********************Media Query*****************************/
+
 /*Telefono normal pequeño*/
 @media screen and (min-width: 480px){
 
@@ -63,12 +115,9 @@ header #next_section img{
 
 /*Tablet mediana*/
 @media screen and (min-width: 600px){
-
   body{
     background: #ffc400;
   }
-
-
 }
 
 /*Tablet normal*/
@@ -76,6 +125,44 @@ header #next_section img{
   body{
     background: #3e2723;
   }
+
+  header{
+    height: 50px;
+  }
+
+  header h1{
+    display: inline-block; /*Para los elementos se pongan uno al lado de otro*/
+    width: 20%;
+    margin: 0px;
+    height: 50px;
+    margin-left: 80px;
+    line-height: 50px; /*Para que quede alineado al medio*/
+    min-width: 200px;
+
+  }
+
+  header h1 > *{
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em; /*80% del tamaño de la letra del padre*/
+    margin: 0px 3px;
+  }
+
+  header h1 figure{
+    height: 40px;
+    width: 40px;
+    margin:0px;
+  }
+
+  header h1 figure img{
+    width: 100%
+  }
+
+
+  
+
     header #prev_section,
     header #next_section{
         position: absolute;
@@ -84,15 +171,23 @@ header #next_section img{
         background: #29abe2;
         right: 40px;
         z-index: 999;
+        border-radius: 50%;
+      }
 
-    }
-
-    header #prev_section img{
+    header #prev_section{
       top: 115px;
     }
 
-    header #next_section img{
+    header #next_section{
       top: 190px;
+    }
+
+    header #prev_section img,
+    header #next_section img{
+      width: 100%;
+      top: 0px;
+      left: 0px;
+
     }
 }
 
